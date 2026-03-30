@@ -12,7 +12,7 @@ st.title("🐦 Bird Species Observation Dashboard")
 # -------------------------------
 # LOAD DATA
 # -------------------------------
-df = pd.read_csv("../data/cleaned_bird_data_new.csv")
+df = pd.read_csv("cleaned_bird_data_new.csv")
 
 # -------------------------------
 # SIDEBAR FILTERS
