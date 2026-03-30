@@ -12,7 +12,14 @@ st.title("🐦 Bird Species Observation Dashboard")
 # -------------------------------
 # LOAD DATA
 # -------------------------------
-df = pd.read_csv("cleaned_bird_data_new.csv")
+@st.cache_data
+def load_data():
+    return pd.read_csv("cleaned_bird_data_new.csv")
+
+try:
+    df = load_data()
+except:
+    st.error("Dataset not found")
 
 # -------------------------------
 # SIDEBAR FILTERS
